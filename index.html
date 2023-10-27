@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="icon" href="img/logo.svg" />
+    <title>FTL: Прямая машина</title>
+  </head>
+  <body>
+   <div class="wrapper">
+      <div class="content">
+         <main class="main">
+            <div class="main__container">
+               <h1 class="main__title">
+                  FTL: Прямая машина
+               </h1>
+               <div class="main__row">
+                  <form action="#" class="main__form">
+                     <section class="form__section1 form__section">
+                        <h2 class="form__section1__title title">
+                           <span> 1 </span> Маршрут
+                        </h2>
+                        <div class="form__section__wrapper">
+                           <label class="label">Откуда</label>
+                           <input type="text" class="form__section1__input">
+                        </div>
+                        <div class="form__section__wrapper">
+                           <label class="label">Куда</label>
+                           <input type="text" class="form__section1__input">
+                        </div>
+                     </section>
+                  
+                     <section class="form__section2 form__section">
+                        <h2 class="title">
+                           <span> 2 </span> Транспорт
+                        </h2>
+                        <div class="form__section2__row">
+                              <div class="gruzPod">
+                                 <label class="label">Грузоподъёмность</label>
+                                 <div class="dropdown">
+                                    <button class="dropdown__button dropdown__button-pod">Не выбрана</button>
+                                    <ul class="dropdown__list">
+                                       <li class="dropdown__list-item dropdown__list-item-pod" data-value="var1">1.5 тонны <span> 8 м³</span></li>
+                                       <li class="dropdown__list-item dropdown__list-item-pod" data-value="var2">1.5 тонны <span> 16 м³</span></li>
+                                       <li class="dropdown__list-item dropdown__list-item-pod" data-value="var3">3 тонны <span> 16 м³</span></li>
+                                       <li class="dropdown__list-item dropdown__list-item-pod" data-value="var4">3 тонны <span> 20 м³</span></li>
+                                       <li class="dropdown__list-item dropdown__list-item-pod" data-value="var5">3 тонны <span> 24 м³</span></li>
+                                    </ul>
+                                    <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                                 </div>  
+                              </div>    
+                              <div class="gruzVar">
+                                 <label class="label">Способ погрузки</label>
+                                 <div class="dropdown">
+                                    <button class="dropdown__button dropdown__button-var"></button>
+                                    <ul class="dropdown__list">
+                                       <li class="dropdown__list-item dropdown__list-item-var dropdown__list-item-var-zad" data-value="zad" checked>Задняя</li>
+                                       <li class="dropdown__list-item dropdown__list-item-var" data-value="bok">Боковая</li>
+                                       <li class="dropdown__list-item dropdown__list-item-var" data-value="verh">Верхняя</li>
+                                    </ul>
+                                    <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                                 </div>   
+                              </div>
+                           </div>
+                        </section>   
+                  
+                        <section class="form__section3 form__section">
+                           <h2 class="title">
+                              <span> 3 </span> Груз
+                           </h2>
+                           <div class="form__section3__row">
+                              <div class="typeGruz">
+                              <label class="label">Тип груза</label>
+                                 <div class="dropdown">
+                                    <button class="dropdown__button dropdown__button dropdown__button-gruz">Не выбрана</button>
+                                    <ul class="dropdown__list">
+                                       <li class="dropdown__list-item" data-value="Variant1">Автотовары и з/ч</li>
+                                       <li class="dropdown__list-item" data-value="Variant2">Одежда и обувь</li>
+                                       <li class="dropdown__list-item" data-value="Variant3">Бытовая техника</li>
+                                    </ul>
+                                    <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                                 </div>
+                              </div>
+                              <div class="paramGruz">
+                                 <div class="classOp">
+                                    <label class="label">Класс опасности</label>
+                                    <div class="dropdown">
+                                       <button class="dropdown__button dropdown__button-class">Не выбрана</button>
+                                       <ul class="dropdown__list">
+                                          <li class="dropdown__list-item dropdown__list-item-class" data-value="NoOp">Не опасный</li>
+                                          <li class="dropdown__list-item dropdown__list-item-class" data-value="class3">Класс 3</li>
+                                          <li class="dropdown__list-item dropdown__list-item-class" data-value="class5">Класс 5</li>
+                                       </ul>
+                                       <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                                    </div>
+                                 </div>
+                                 <div class="showCen">
+                                    <label class="label">Объявленная ценность, ₽</label>
+                                    <input type="text" class="cen" placeholder="≥ 1">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="needTemp">
+                              <input type="checkbox" name="checkbox" id="tempCheck">
+                              <label class="checkbox__label label" for="tempCheck">Требуется температурный режим</label>
+                           </div>
+                           <div class="temp-active">
+                              <div class="temp-active-left">
+                                 <label class="label">От, °C</label>
+                                 <input type="text" class="cen" value="-20">
+                              </div> 
+                              <div class="temp-active-right">
+                                 <label class="label">До, °C</label>
+                                 <input type="text" class="cen" value="+20">
+                              </div>
+                           </div>
+                        </section>
+                  
+                        <section class="form__section4 form__section">
+                           <h2 class="title">
+                              <span> 4 </span> Время
+                           </h2>
+                           <div class="subtitle__when">
+                              <div class="subtitle__when-left">Когда прибыть на точку</div>
+                              <div class="subtitle__when-right">700 км в день</div>
+                           </div>
+                           <div class="form__section4__before-where form__section4__where">
+                              <div class="form__section4__before-where__input-wrapper form__section4__where__input-wrapper">
+                                 <img src="img/dot1.svg" alt="">
+                                 <input type="text" class="form__section4__before-where__input form__section4__where__input" id="input-required" placeholder="Адрес не указан">
+                              </div>
+                              <button class="form__section4__before-where__link form__section4__where__link">НЕ ВЫБРАНО</button>
+                           </div>
+                           <div class="form__section4__after-where form__section4__where">
+                              <div class="form__section4__after-where__input-wrapper form__section4__where__input-wrapper">
+                                 <img src="img/dot2.svg" alt="">
+                                 <input type="text" class="form__section4__after-where__input form__section4__where__input" placeholder="Адрес не указан">
+                              </div>
+                              <button class="form__section4__after-where__link form__section4__where__link" id="btn-disabled" disabled>НЕ ВЫБРАНО</button>
+                           </div>
+                           <div class="message">
+                              <label class="label">Комментарий к заказу</label>
+                              <textarea type="text" class="msg" placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                           </div>
+                        </section>
+                  
+                  </form>  
+
+                  <div class="main__right">
+                     <p class="main__right__instruction">
+                        Для расчета стоимости необходимо <br/> ввести параметры груза, пункты отправки и прибытия.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+   </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
